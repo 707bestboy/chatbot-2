@@ -7,7 +7,7 @@ from datetime import datetime
 load_dotenv()
 
 app = Flask(__name__)
-app.secret_key = 'your_secret_key_here'  # Needed for session cookie
+app.secret_key =  os.getenv("SECRET_KEY")# Needed for session cookie
 
 # Configure Gemini
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
